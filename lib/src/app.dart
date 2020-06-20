@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './config//theme/app_color.dart';
 import './screens/home_screen.dart';
+import './screens/main_screen.dart';
 
 class App extends StatelessWidget {
   @override
