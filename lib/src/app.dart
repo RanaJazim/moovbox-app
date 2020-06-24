@@ -13,6 +13,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         scaffoldBackgroundColor: AppColors.dark,
+        primaryColor: AppColors.dark,
         textTheme: TextTheme(
           headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           headline2: TextStyle(fontSize: 65.0, fontWeight: FontWeight.bold),

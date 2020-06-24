@@ -17,6 +17,7 @@ class SideBySideContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: _widgets(
         <Widget>[
           leading != null

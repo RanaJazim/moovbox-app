@@ -6,6 +6,7 @@ import '../widgets/app_card.dart';
 import '../config/theme/app_color.dart';
 import '../widgets/top_bottom_container.dart';
 import '../widgets/movie_list_with_header.dart';
+import './genre_movie_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final _leftRightPadding = 15.0;
@@ -103,13 +104,22 @@ class _MoviesSection extends StatelessWidget {
 }
 
 class _MovieAndTvShowList extends StatelessWidget {
+  void _navigateToGenreMovieScreen(ctx) {
+    Navigator.of(ctx).push(
+      MaterialPageRoute(builder: (_) => GenreMovieScreen()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MovieListWithHeader(
       leadingTitle: "Popular Movies",
-      trailing: AppBadge(
-        child: Text("See All"),
-        padding: EdgeInsets.all(5),
+      trailing: GestureDetector(
+        onTap: () => _navigateToGenreMovieScreen(context),
+        child: AppBadge(
+          child: Text("See All"),
+          padding: EdgeInsets.all(5),
+        ),
       ),
       item: AppCard(
         height: double.infinity,
