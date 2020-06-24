@@ -20,7 +20,9 @@ class TopBottomContainer extends StatelessWidget {
       children: <Widget>[
         top,
         SizedBox(height: gap),
-        bottom,
+        Expanded(
+          child: bottom,
+        ),
       ],
     );
   }

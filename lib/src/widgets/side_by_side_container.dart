@@ -25,11 +25,7 @@ class SideBySideContainer extends StatelessWidget {
                   child: leading,
                 )
               : Container(),
-          trailing != null
-              ? Expanded(
-                  child: trailing,
-                )
-              : null,
+          trailing != null ? trailing : null,
         ],
       ),
     );

@@ -11,6 +11,7 @@ class AppCard extends StatelessWidget {
   final String title;
   final double width;
   final double height;
+  final double transparentRate;
 
   AppCard({
     this.genre = "Action",
@@ -20,6 +21,7 @@ class AppCard extends StatelessWidget {
     this.rating,
     this.title = "Title",
     this.width = 150.0,
+    this.transparentRate = 0.7,
   });
 
   List<Widget> widgets(List<Widget> widgets) {
@@ -36,7 +38,7 @@ class AppCard extends StatelessWidget {
       child: ImageBackground(
         borderRadius: 20.0,
         imgUrl: imgUrl,
-        transparentRate: 0.7,
+        transparentRate: transparentRate,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -64,11 +66,12 @@ class AppCard extends StatelessWidget {
                 SizedBox(height: heightBetweenSections),
                 Text(
                   "$title",
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.headline5,
                 ),
                 SizedBox(height: heightBetweenSections),
                 Text(
                   "$genre",
+                  overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
               ],
