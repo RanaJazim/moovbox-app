@@ -90,7 +90,7 @@ class _BuildList extends StatelessWidget {
           ],
         ),
       ),
-      bottom: Expanded(
+      bottom: Container(
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 10,
