@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../config/theme/app_color.dart';
+import '../widgets/app_divider.dart';
 
 class ProfileScreen extends StatelessWidget {
   final _padding = 15.0;
@@ -18,7 +19,7 @@ class ProfileScreen extends StatelessWidget {
               child: _ProfilePic(),
             ),
             _ProfileInfo(),
-            _Divider(),
+            AppDivider(),
             Expanded(
               child: _ActionList(),
             ),
@@ -101,7 +102,7 @@ class _Footer extends StatelessWidget {
           ),
           trailing: Text("Switch Icon here.."),
         ),
-        _Divider(),
+        AppDivider(),
         SizedBox(height: 10),
         Text(
           "Logout",
