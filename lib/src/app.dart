@@ -4,6 +4,7 @@ import './config//theme/app_color.dart';
 import './screens/home_screen.dart';
 import './screens/main_screen.dart';
 import './screens/movie_info_screen.dart';
+import './screens/category_screen.dart';
 
 class App extends StatelessWidget {
   @override
@@ -31,7 +32,7 @@ class App extends StatelessWidget {
           bodyText1: TextStyle(fontSize: 19.0, fontWeight: FontWeight.normal),
         ),
       ),
-      home: MovieInfoScreen(),
+      home: CategoryScreen(),
     );
   }
 }
