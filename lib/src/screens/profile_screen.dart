@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../config/theme/app_color.dart';
 import '../widgets/app_divider.dart';
+import '../widgets/img_avatar.dart';
 
 class ProfileScreen extends StatelessWidget {
   final _padding = 15.0;
@@ -16,7 +17,7 @@ class ProfileScreen extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(top: 100),
-              child: _ProfilePic(),
+              child: ImageAvatar(imgUrl: _profileImgUrl),
             ),
             _ProfileInfo(),
             AppDivider(),
@@ -27,19 +28,6 @@ class ProfileScreen extends StatelessWidget {
             SizedBox(height: 50),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class _ProfilePic extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 80,
-      height: 80,
-      child: CircleAvatar(
-        backgroundImage: NetworkImage(_profileImgUrl),
       ),
     );
   }
@@ -113,13 +101,6 @@ class _Footer extends StatelessWidget {
         ),
       ],
     );
-  }
-}
-
-class _Divider extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Divider(color: AppColors.light);
   }
 }
 

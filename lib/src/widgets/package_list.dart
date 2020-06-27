@@ -40,35 +40,46 @@ class _SinglePackage extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.only(left: leftPadding, top: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              "${_package.packageTitle}",
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyText1
-                  .copyWith(color: AppColors.light),
-            ),
-            SizedBox(height: 5),
-            Text(
-              "\$${_package.price} / ${_package.subsription}",
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyText1
-                  .copyWith(color: AppColors.primary),
-            ),
-            SizedBox(height: 10),
-            Text(
-              "${_package.noOfMovies}",
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-          ],
-        ),
+        child: _ActualContent(_package),
       ),
+    );
+  }
+}
+
+class _ActualContent extends StatelessWidget {
+  final Package _package;
+
+  _ActualContent(this._package);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          "${_package.packageTitle}",
+          overflow: TextOverflow.ellipsis,
+          style: Theme.of(context)
+              .textTheme
+              .bodyText1
+              .copyWith(color: AppColors.light),
+        ),
+        SizedBox(height: 5),
+        Text(
+          "\$${_package.price} / ${_package.subsription}",
+          overflow: TextOverflow.ellipsis,
+          style: Theme.of(context)
+              .textTheme
+              .bodyText1
+              .copyWith(color: AppColors.primary),
+        ),
+        SizedBox(height: 10),
+        Text(
+          "${_package.noOfMovies}",
+          overflow: TextOverflow.ellipsis,
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ],
     );
   }
 }

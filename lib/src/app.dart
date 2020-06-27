@@ -7,6 +7,7 @@ import './screens/movie_info_screen.dart';
 import './screens/category_screen.dart';
 import './screens/profile_screen.dart';
 import './screens/packages_screen.dart';
+import './screens/comment_list_screen.dart';
 
 class App extends StatelessWidget {
   @override
@@ -34,7 +35,7 @@ class App extends StatelessWidget {
           bodyText1: TextStyle(fontSize: 19.0, fontWeight: FontWeight.normal),
         ),
       ),
-      home: PackagesScreen(),
+      home: CommentListScreen(),
     );
   }
 }
