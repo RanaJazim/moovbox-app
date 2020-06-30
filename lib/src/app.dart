@@ -35,7 +35,7 @@ class App extends StatelessWidget {
           bodyText1: TextStyle(fontSize: 19.0, fontWeight: FontWeight.normal),
         ),
       ),
-      home: PackagesScreen(),
+      home: MainScreen(),
     );
   }
 }

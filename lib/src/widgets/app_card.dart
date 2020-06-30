@@ -66,6 +66,7 @@ class AppCard extends StatelessWidget {
                 SizedBox(height: heightBetweenSections),
                 Text(
                   "$title",
+                  overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.headline5,
                 ),
                 SizedBox(height: heightBetweenSections),
